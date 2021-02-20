@@ -24,20 +24,21 @@ const Comments = (props) => {
     };
 
     return (
-        <>
-            <div>
+        <div>
+            <div className={styles.subHeader}>
                 <label htmlFor={props.name}>{props.name} : </label>
                 <span className={styles.count} name={props.name}>{props.count}</span>
                 <input className={styles.comments} type="button" onClick={props.callbackFunc} value={BUTTON_NAME} />
                 <div className="ui left pointing label">
-                   {props.readMe}
+                    {props.readMe}
                 </div>
-                <div className="ui five cards">
-                    {renderList(props.comments)}
-                </div>
-
             </div>
-        </>
+
+            <div className="ui stackable five cards">
+                {renderList(props.comments)}
+            </div>
+
+        </div>
     );
 };
 

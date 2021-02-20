@@ -72,14 +72,20 @@ const App = () => {
         <div className={`container ${styles.mainPage}`}>
             <h3 class={`ui block header ${styles.header} `}>{HEADER}</h3>
             <div className="ui stackable grid">
-                <div className="sixteen wide column">
-                    <Comments name={`Normal Counter`} callbackFunc={normalClicks} count={normalCount} comments={normalComments} readMe={readME[0]} />
+                <div class="row">
+                    <div className="sixteen wide column">
+                        <Comments name={`Normal Counter`} callbackFunc={normalClicks} count={normalCount} comments={normalComments} readMe={readME[0]} />
+                    </div>
                 </div>
-                <div className="sixteen wide column">
-                    <Comments name={`Debounce Counter`} callbackFunc={debounceMe} count={debounceCount} comments={debounceComments} readMe={readME[1]} />
+                <div class="row">
+                    <div className="sixteen wide column">
+                        <Comments name={`Debounce Counter`} callbackFunc={debounceMe} count={debounceCount} comments={debounceComments} readMe={readME[1]} />
+                    </div>
                 </div>
-                <div className="sixteen wide column">
-                    <Comments name={`Throttling Counter`} callbackFunc={throttleMeTimeOut} count={throttlingCount} comments={throttlingComments} readMe={readME[2]} />
+                <div class="row">
+                    <div className="sixteen wide column">
+                        <Comments name={`Throttling Counter`} callbackFunc={throttleMeTimeOut} count={throttlingCount} comments={throttlingComments} readMe={readME[2]} />
+                    </div>
                 </div>
             </div>
         </div >
